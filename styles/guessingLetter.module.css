@@ -1,0 +1,33 @@
+.eachLetter {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  min-width: 0;
+  background-color: var(--background-color);
+}
+
+.space {
+  background-color: var(--color-guess-space);
+}
+
+.correct {
+  background-color: var(--color-guess-correct);
+  color: var(--color-light-text);
+}
+
+.blinkingCursor {
+  animation: 0.75s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}

@@ -8,7 +8,7 @@ import styles from "./styles/app.module.css";
 
 export default function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/space-tourism">
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />

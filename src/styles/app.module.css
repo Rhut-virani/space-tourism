@@ -1,0 +1,41 @@
+@import "./__colors.css";
+@import "./__spacers.css";
+@import "./__typography.css";
+@import "./__url.css";
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	/* height: 100vh; */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+ul,
+li,
+button,
+a {
+	all: unset;
+	cursor: pointer;
+}
+
+/* :global(.activeBubble) {
+	background-color: var(--color-white);
+}
+
+:global(.activeBorder) {
+	border-bottom: 3px solid var(--color-white);
+} */
+
+@media (min-width: 641px) {
+	html,
+	body {
+		overflow: hidden;
+	}
+}

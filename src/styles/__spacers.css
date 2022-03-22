@@ -1,0 +1,23 @@
+@media (min-width: 1008px) {
+	:root {
+		--space-50: 0.5rem;
+		--space-100: 0.75rem;
+		--space-200: 1rem;
+		--space-300: 1.25rem;
+		--space-600: 1.5rem;
+	}
+}
+
+:root {
+	--space-50: 0.25rem;
+	--space-100: 0.5rem;
+	--space-200: 0.75rem;
+	--space-300: 1rem;
+	--space-600: 1.25rem;
+	--space-700: 1.5rem;
+	--space-800: 1.75rem;
+	--space-900: 2rem;
+
+	--mobileNav-Width: 75vw;
+	--mobileNav-Original-Posiion: -75vw;
+}

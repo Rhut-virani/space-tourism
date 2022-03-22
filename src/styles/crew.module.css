@@ -1,0 +1,146 @@
+.main {
+	background-image: var(---crew-Background-Image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	padding: 12vh var(--space-900) var(--space-900) var(--space-900);
+}
+
+.crewWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+.imageWrapper {
+	display: flex;
+	justify-content: center;
+	font-family: var(--Barlow-Condensed-Font);
+	border-bottom: 1px solid var(--color-hover);
+}
+
+.crewHeading {
+	text-align: center;
+}
+.crewHeading h5 {
+	letter-spacing: var(--letter-space);
+	padding: var(--space-900) 0;
+}
+
+.crewHeading h5 span {
+	color: var(--color-hover);
+}
+
+.crewImage {
+	width: 50%;
+}
+.crewInfo {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+.selectionDots {
+	display: flex;
+	padding: var(--space-300);
+}
+
+.selectionDots button {
+	background-color: var(--color-hover);
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	margin: 0 var(--space-300);
+}
+
+.selectionDots .activeBubble {
+	background-color: var(--color-white);
+}
+
+.crewinfoText {
+	text-align: center;
+	padding: var(--space-300);
+}
+
+.crewinfoText h4 {
+	display: none;
+}
+
+.crewinfoText h3,
+.crewinfoText h4 {
+	font-family: var(--Bellefair-Font);
+}
+.crewinfoText p {
+	margin-top: var(--space-900);
+}
+
+@media (min-width: 641px) {
+	.main {
+		padding-bottom: 0;
+	}
+	.crewHeading {
+		text-align: start;
+	}
+	.crewWrapper {
+		justify-content: space-between;
+		height: 100%;
+	}
+	.imageWrapper,
+	.selectionDots {
+		order: 2;
+	}
+	.imageWrapper {
+		flex: 1.5;
+		border-bottom: none;
+	}
+	.crewImage {
+		object-fit: contain;
+		width: 70%;
+	}
+	.crewInfo {
+		justify-content: space-between;
+	}
+	.crewinfoText h4 {
+		display: block;
+		padding: var(--space-600) 0;
+		opacity: 50%;
+	}
+}
+
+@media (min-width: 1008px) {
+	.main {
+		padding: 15vh var(--space-900) var(--space-900) var(--space-900);
+	}
+	.crewWrapper {
+		flex-direction: row;
+	}
+	.imageWrapper {
+		flex: 1;
+	}
+	.crewInfo {
+		flex: 1.25;
+		align-items: flex-start;
+		align-self: flex-start;
+		justify-content: space-evenly;
+		height: 80%;
+	}
+	.crewinfoText {
+		text-align: start;
+	}
+	.crewinfoText,
+	.selectionDots,
+	.crewHeading {
+		margin-left: 5rem;
+		padding-left: 0;
+	}
+	.crewinfoText p {
+		width: 75%;
+	}
+	.selectionDots button {
+		margin: 0 var(--space-900) 0 0;
+	}
+}

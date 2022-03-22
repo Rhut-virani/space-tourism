@@ -1,0 +1,120 @@
+.main {
+	background-image: var(---technology-Background-Image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	width: 100vw;
+	padding: 12vh 0 var(--space-900) 0;
+}
+
+.techHeading {
+	text-align: center;
+}
+.techHeading h5 {
+	letter-spacing: var(--letter-space);
+	padding: var(--space-900) 0;
+}
+.techHeading h5 span {
+	color: var(--color-hover);
+}
+
+.techWrapper {
+	display: flex;
+	flex-direction: column;
+}
+.techImageWrapper {
+	width: 100%;
+}
+.techImage {
+	width: 100%;
+}
+.techInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: var(--space-900);
+	gap: 1rem;
+}
+.selectionBubble button {
+	background-color: transparant;
+	border: 1px solid var(--color-white);
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	text-align: center;
+	margin: 0 var(--space-600);
+	font-size: var(--font-H4);
+}
+
+.activeBubble {
+	background-color: var(--color-white);
+	color: var(--background-color);
+}
+.techinfoText {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+}
+.techInfoName h3 {
+	font-family: var(--Bellefair-Font);
+}
+.techInfoDescription {
+	text-align: center;
+	width: 35ch;
+}
+@media (min-width: 641px) {
+	.techHeading {
+		text-align: start;
+		margin-left: var(--space-900);
+	}
+	.techWrapper {
+		gap: 2rem;
+	}
+	.selectionBubble {
+		margin: var(--space-300) 0;
+	}
+	.selectionBubble button {
+		height: 4rem;
+		width: 4rem;
+	}
+}
+
+@media (min-width: 1008px) {
+	.techWrapper {
+		flex-direction: row;
+	}
+	.techImageWrapper {
+		order: 2;
+		flex: 1;
+		text-align: end;
+	}
+	.techImage {
+		height: 100%;
+		width: auto;
+	}
+	.techInfo {
+		flex: 1.5;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.selectionBubble {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		align-items: center;
+	}
+	.selectionBubble button {
+		height: 5rem;
+		width: 5rem;
+	}
+	.techinfoText {
+		align-items: flex-start;
+		flex: 1.5;
+	}
+	.techInfoDescription {
+		text-align: start;
+		width: 70%;
+	}
+}

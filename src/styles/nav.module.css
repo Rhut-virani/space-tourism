@@ -1,0 +1,138 @@
+.nav {
+	padding: var(--space-900);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+.logo {
+	object-fit: contain;
+}
+
+.hamburger,
+.close {
+	object-fit: contain;
+	z-index: 2;
+}
+
+.navLinkOverlay {
+	height: 100vh;
+	width: 75vw;
+	position: absolute;
+	top: 0;
+	right: -75vw;
+	transition: transform 1s;
+	backdrop-filter: blur(2.5rem);
+}
+
+.navLinkWrapper {
+	margin-top: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.showNav {
+	transform: translateX(-75vw);
+}
+
+.navLink {
+	font-family: var(--Barlow-Condensed-Font);
+	font-size: var(--font-Nav-Text);
+	letter-spacing: 2.7px;
+	padding: var(--space-600) var(--space-900);
+}
+
+.activeBorder {
+	border-right: 3px solid var(--color-white);
+}
+
+.navLink span {
+	color: var(--color-whirte);
+	font-weight: 900;
+}
+
+/* //tablet */
+
+@media (min-width: 641px) {
+	.nav {
+		padding: 0;
+	}
+	.logo {
+		margin-left: var(--space-900);
+	}
+	.navLinkOverlay {
+		position: initial;
+		height: 100%;
+		width: 75vw;
+		background-color: rgba(255, 255, 255, 0.027);
+	}
+	.navLinkWrapper {
+		margin-top: 0;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	.navIcon {
+		display: none;
+	}
+
+	.navLink {
+		text-align: center;
+		letter-spacing: 1px;
+		padding: var(--space-900) var(--space-600);
+		cursor: pointer;
+	}
+
+	.navLink span {
+		display: none;
+	}
+
+	.navLink:hover {
+		border-bottom: 3px solid var(--color-hover);
+	}
+	.activeBorder {
+		border-right: none;
+		border-bottom: 3px solid var(--color-white);
+	}
+}
+
+@media (min-width: 1008px) {
+	.nav {
+		padding-right: 0;
+		margin-top: 2rem;
+	}
+	.navLinkOverlay {
+		position: initial;
+		height: 100%;
+		width: 65vw;
+	}
+	.navLinkWrapper {
+		flex-direction: row;
+		text-align: center;
+	}
+	.navLine {
+		height: 1px;
+		position: absolute;
+		background-color: var(--color-white);
+		opacity: 25.15%;
+		width: 25vw;
+		left: 12vw;
+		z-index: 1;
+		flex: 1;
+	}
+
+	.navIcon {
+		display: none;
+	}
+
+	.navLink {
+		letter-spacing: 2.7px;
+	}
+	.navLink span {
+		display: inline;
+	}
+}

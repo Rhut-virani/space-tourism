@@ -1,17 +1,18 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { logoImages } from "../utilities/images";
 import styles from "../styles/nav.module.css";
 
 export default function Nav() {
 	const [isOpen, setIsOpen] = useState(false);
+	const pages = ["/", "destination", "crew", "technology", "Test"];
 
 	return (
 		<nav className={styles.nav}>
 			{" "}
-			<Link to="/">
+			<NavLink to="/">
 				<img className={styles.logo} src={logoImages.logo} alt="logo" />
-			</Link>
+			</NavLink>
 			<div className={styles.navLine}></div>
 			<img
 				src={isOpen ? logoImages.close : logoImages.hamburger}
@@ -27,38 +28,23 @@ export default function Nav() {
 				className={`${styles.navLinkOverlay} ${isOpen ? styles.showNav : ""} `}
 			>
 				<div className={styles.navLinkWrapper}>
-					<NavLink
-						to="/"
-						className={({ isActive }) =>
-							`${styles.navLink}  ${isActive ? styles.activeBorder : ""}`
-						}
-					>
-						<span>00</span> HOME
-					</NavLink>
-					<NavLink
-						to="destination"
-						className={({ isActive }) =>
-							`${styles.navLink}  ${isActive ? styles.activeBorder : ""}`
-						}
-					>
-						<span>01</span> DESTINATION{" "}
-					</NavLink>
-					<NavLink
-						to="crew"
-						className={({ isActive }) =>
-							`${styles.navLink}  ${isActive ? styles.activeBorder : ""}`
-						}
-					>
-						<span>02</span> CREW{" "}
-					</NavLink>
-					<NavLink
-						to="technology"
-						className={({ isActive }) =>
-							`${styles.navLink}  ${isActive ? styles.activeBorder : ""}`
-						}
-					>
-						<span>03</span> TECHNOLOGY{" "}
-					</NavLink>
+					{pages.map((page, i) => {
+						return (
+							<NavLink
+								to={page}
+								key={i}
+								onClick={() => {
+									setIsOpen((prev) => !prev);
+								}}
+								className={({ isActive }) =>
+									`${styles.navLink}  ${isActive ? styles.activeBorder : ""}`
+								}
+							>
+								<span>0{i} </span>
+								{page === "/" ? `HOME` : page.toUpperCase()}
+							</NavLink>
+						);
+					})}
 				</div>
 			</div>
 		</nav>

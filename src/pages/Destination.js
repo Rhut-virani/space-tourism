@@ -8,9 +8,13 @@ export default function Destination() {
 	const { destinations } = json;
 	return (
 		<div className={styles.main}>
+			<div className={styles.destinationHeading}>
+				<h5>
+					<span>01</span> PICK YOUR DESTINATION
+				</h5>
+			</div>
 			<div className={styles.destinationWrapper}>
 				<div className={styles.imageWrapper}>
-					<h5>01 PICK YOUR DESTINATION</h5>
 					<img
 						src={destinationImages[`${destinations[currentId].name}`]}
 						className={styles.image}

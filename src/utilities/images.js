@@ -51,3 +51,32 @@ export const technologyImages = {
 	spaceport,
 	spaceportDesktop,
 };
+
+export const images = {
+	logo: {
+		logo,
+		hamburger,
+		close,
+	},
+	destination: {
+		Moon,
+		Mars,
+		Titan,
+		Europa,
+	},
+
+	crew: {
+		Ansari,
+		Hurley,
+		Glover,
+		Shuttleworth,
+	},
+	technology: {
+		launch,
+		launchDesktop,
+		space,
+		spaceDesktop,
+		spaceport,
+		spaceportDesktop,
+	},
+};

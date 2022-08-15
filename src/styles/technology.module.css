@@ -13,6 +13,7 @@
 .techHeading h5 {
 	letter-spacing: var(--letter-space);
 	padding: var(--space-900) 0;
+	font-family: var(--Barlow-Condensed-Font);
 }
 .techHeading h5 span {
 	color: var(--color-hover);

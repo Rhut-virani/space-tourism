@@ -2,7 +2,7 @@
 	"name": "space-tourism",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://rhut-virani.github.io/space-tourism/",
+	"homepage": "https://rhut-virani.github.io/space-tourism`",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.2",
 		"@testing-library/react": "^12.1.4",

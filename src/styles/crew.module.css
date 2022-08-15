@@ -28,6 +28,7 @@
 .crewHeading h5 {
 	letter-spacing: var(--letter-space);
 	padding: var(--space-900) 0;
+	font-family: var(--Barlow-Condensed-Font);
 }
 
 .crewHeading h5 span {
